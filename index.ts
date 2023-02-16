@@ -15,14 +15,7 @@ function nextLevel(lvl: number): TSoulsLevel {
 }
 
 function runesTo(lvl: number): number {
-  if (lvl < 1 || lvl > 714) {
-    return -1;
-  } else {
-    let totalFrom = soulsLevels[1].total;
-    let totalTo = soulsLevels[lvl].total;
-
-    return totalTo - totalFrom;
-  }
+  return runesFromTo(1, lvl);
 }
 
 function runesFromTo(lvlFrom: number, lvlTo: number): number {
