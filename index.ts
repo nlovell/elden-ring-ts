@@ -21,15 +21,15 @@ function runesTo(lvl: number): number {
 function runesFromTo(lvlFrom: number, lvlTo: number): number {
   if (lvlFrom < 1 || lvlFrom > 714 || lvlTo < 1 || lvlTo > 714) {
     return -1;
-  } else {
-    if (lvlTo <= lvlFrom) {
-      return -1;
-    } else {
-      let totalFrom = soulsLevels[lvlFrom].total;
-      let totalTo = soulsLevels[lvlTo].total;
+  }
 
-      return totalTo - totalFrom;
-    }
+  let totalFrom = soulsLevels[lvlFrom].total;
+  let totalTo = soulsLevels[lvlTo].total;
+
+  if (lvlTo <= lvlFrom) {
+    return totalFrom - totalTo;
+  } else {
+    return totalTo - totalFrom;
   }
 }
 
