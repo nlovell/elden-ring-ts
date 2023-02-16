@@ -24,19 +24,19 @@ For a simple level calculator, check out this site: https://eldenring.rorydobson
 [npm][]:
 
 ```sh
-npm i elden-ring
+npm i elden-ring-ts
 ```
 
 [yarn][]:
 
 ```sh
-yarn add elden-ring
+yarn add elden-ring-ts
 ```
 
 ## Usage
 
 ```js
-import eldenring from "elden-ring"
+import eldenring from "elden-ring-ts"
 
 // Returns all levelling information
 eldenring.allLevels()

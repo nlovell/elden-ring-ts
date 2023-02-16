@@ -1,9 +1,9 @@
 {
-    "name": "elden-ring",
+    "name": "elden-ring-ts",
     "version": "1.0.5",
     "description": "Retrieves information on the game Elden Ring, including the number of runes to reach a certain level, and the amount of runes needed to go from one level to another.",
     "license": "MIT",
-    "repository": "rmd5/elden-ring",
+    "repository": "nlovell/elden-ring-ts",
     "main": "index.js",
     "keywords": [
         "elden ring",
@@ -16,5 +16,8 @@
     ],
     "dependencies": {
         "node-fetch": "^3.2.3"
+    },
+    "devDependencies": {
+        "@types/node": "^18.13.0"
     }
 }
