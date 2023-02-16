@@ -8,26 +8,36 @@ function allLevels(): TSoulsLevels {
 }
 
 function nextLevel(level: number): TSoulsLevel {
-  if (level < 1 || level > 714) {
+  const wholeLevel = Math.round(level);
+  if (wholeLevel < 1 || wholeLevel > 714) {
     return soulsLevels[0];
   } else {
-    return soulsLevels[level + 1];
+    return soulsLevels[wholeLevel + 1];
   }
 }
 
 function runesTo(level: number): number {
-  return runesFromTo(1, level);
+  const wholeLevel = Math.round(level);
+  return runesFromTo(1, wholeLevel);
 }
 
 function runesFromTo(levelFrom: number, levelTo: number): number {
-  if (levelFrom < 1 || levelFrom > 714 || levelTo < 1 || levelTo > 714) {
+  const wholeLevelFrom = Math.round(levelFrom);
+  const wholeLevelTo = Math.round(levelTo);
+
+  if (
+    wholeLevelFrom < 1 ||
+    wholeLevelFrom > 714 ||
+    wholeLevelTo < 1 ||
+    wholeLevelTo > 714
+  ) {
     return -1;
   }
 
-  let totalFrom = soulsLevels[levelFrom].total;
-  let totalTo = soulsLevels[levelTo].total;
+  let totalFrom = soulsLevels[wholeLevelFrom].total;
+  let totalTo = soulsLevels[wholeLevelTo].total;
 
-  if (levelTo <= levelFrom) {
+  if (levelTo <= wholeLevelFrom) {
     return totalFrom - totalTo;
   } else {
     return totalTo - totalFrom;
