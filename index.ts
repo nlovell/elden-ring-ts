@@ -1,5 +1,6 @@
 import { soulsLevels, TSoulsLevel, TSoulsLevels } from "./soul-levels";
 import { reviews, TReviews } from "./reviews";
+import { aboutGame, TAboutGame } from "./about-game";
 
 // Get all soul level information
 function allLevels(): TSoulsLevels {
@@ -37,48 +38,8 @@ function ratings(): TReviews {
   return reviews;
 }
 
-type aboutGame = {
-  title: string;
-  genre: string;
-  release: string;
-  developer: string;
-  platforms: string[];
-  awards: string[];
-  writers: string[];
-  directors: string[];
-  composers: string[];
-  publishers: string[];
-};
-
-function info(): aboutGame {
-  return {
-    title: "Elden Ring",
-    genre: "Action Role-Playing",
-    release: "February 25, 2022",
-    developer: "FromSoftware Inc",
-    platforms: [
-      "PlayStation 4",
-      "Xbox Series X and Series S",
-      "Xbox One",
-      "PlayStation 5",
-      "Microsoft Windows",
-    ],
-    awards: ["The Game Award for Most Anticipated Game"],
-    directors: ["Hidetaka Miyazaki", "Yui Tanimura"],
-    writers: ["George R. R. Martin", "Hidetaka Miyazaki"],
-    composers: [
-      "Yuka Kitamura",
-      "Tsukasa Saitoh",
-      "Yoshimi Kudō",
-      "Tai Tomisawa",
-      "Shoi Miyazawa",
-    ],
-    publishers: [
-      "FromSoftware Inc",
-      "BANDAI NAMCO",
-      "Namco Bandai Games America Inc",
-    ],
-  };
+function info(): TAboutGame {
+  return aboutGame;
 }
 
 let eldenring = {
